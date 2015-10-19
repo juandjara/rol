@@ -1,11 +1,6 @@
 # Rol
 Proyecto usado para practicar el desarrollo de un gestor de rol y el trabajo en equipo usando el stack M.E.A.N.
 
-You can use `bower` to install the client dependencies of this project
-```
-bower install
-```
-
 To run the project in `localhost` you can use `node.js` to run the `server.js` file. For this you will need to have [node](https://nodejs.org) installed
 ```
 node server.js
