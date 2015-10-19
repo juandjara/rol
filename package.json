@@ -1,0 +1,14 @@
+{
+  "name": "rol-client",
+  "version": "1.0.0",
+  "description": "aaa",
+  "main": "server.js",
+  "scripts": {
+    "test": "curl localhost:8080"
+  },
+  "author": "juandjara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
