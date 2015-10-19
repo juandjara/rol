@@ -1,0 +1,35 @@
+{
+  "name": "rol",
+  "version": "0.0.0",
+  "homepage": "fuken.xyz/rol",
+  "authors": [
+    "juandjara",
+    "jukar",
+    "lammerlord92"
+  ],
+  "description": "didactic project for learning mean stack and team work with git",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "github",
+    "teamwork",
+    "express",
+    "node",
+    "mongo"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-socket-io": "~0.7.0",
+    "bootstrap": "~3.3.5"
+  }
+}
