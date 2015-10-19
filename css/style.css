@@ -1,0 +1,38 @@
+.squared{
+	border-radius: 0%;
+}
+
+.title{
+	background-color: aliceblue;
+}
+
+.center{
+	text-align: center;
+}
+
+.avatar{
+	max-width: 100px;
+}
+
+hr{
+	border-color: #CCC;
+}
+
+.under-navbar{
+	padding-top: 60px;
+}
+
+.navbar{
+	padding: 0px 10px;
+}
+
+footer{
+	margin-bottom: 10px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.main{
+	min-height: 40em;
+}
+
