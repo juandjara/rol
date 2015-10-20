@@ -3,6 +3,7 @@ Proyecto usado para practicar el desarrollo de un gestor de rol y el trabajo en 
 
 To run the project in `localhost` you can use `node.js` to run the `server.js` file. For this you will need to have [node](https://nodejs.org) installed
 ```
+npm install
 node server.js
 ```
 
