@@ -13,7 +13,7 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body ng-app="rol">
     <nav class="squared navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and collapse toggle -->
@@ -38,17 +38,17 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container under-navbar main">
+    <div class="container under-navbar">
       <section class="row">
         <div class="center-block title">
           <a href="#/me"><img src="img/enfadasion.png" alt="user avatar" class="img-circle avatar pull-left"></a>
           <h1>
-            <a href="#/me"><small>Username</small></a>
+            <a href="#/me"><small>User N</small></a>
           </h1>
         </div>
         <hr>
       </section>
-      <section class="row">
+      <section class="row main" ng-controller="ChatController as vm">
         <div class="col-md-3">
           <div class="jumbotron text-center">
             Info del master
@@ -77,12 +77,19 @@
             <hr>
             <div class="panel panel-primary">
               <div class="panel-heading">Nombre de la campaña</div>
-              <div class="panel-body">Registro de acciones</div>
+              <div class="panel-body">
+                Registro de acciones
+                <ul class="list-group">
+                  <li class="list-group-item" ng-repeat="m in vm.actions" ng-class="{'text-left': $even, 'text-right': $odd}">
+                    <strong>{{m.user}}</strong>: {{m.action}}
+                  </li>
+                </ul>
+              </div>
               <div class="panel-footer">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Espera tu turno...">
+                  <input ng-model="vm.action" type="text" class="form-control" placeholder="Espera tu turno...">
                   <span class="input-group-btn">
-                    <button type="button" class="btn btn-primary" aria-label="Enviar tu mensaje">
+                    <button ng-click="vm.addAction()" type="button" class="btn btn-primary" aria-label="Enviar tu mensaje">
                       <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
                     </button>
                   </span>
@@ -97,12 +104,19 @@
             <hr>
             <div class="panel panel-default">
               <div class="panel-heading">Conversación</div>
-              <div class="panel-body">Mensajes</div>
+              <div class="panel-body">
+                Registro de mensajes
+                <ul class="list-group">
+                  <li class="list-group-item" ng-repeat="m in vm.messages" ng-class="{'text-left': $even, 'text-right': $odd}">
+                    <strong>{{m.user}}</strong>: {{m.message}}
+                  </li>
+                </ul>
+              </div>
               <div class="panel-footer">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Comenta">
+                  <input ng-model="vm.message" type="text" class="form-control" placeholder="Comenta">
                   <span class="input-group-btn">
-                    <button type="button" class="btn btn-default" aria-label="Enviar tu mensaje">
+                    <button ng-click="vm.addMessage()" type="button" class="btn btn-default" aria-label="Enviar tu mensaje">
                       <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
                     </button>
                   </span>
@@ -127,8 +141,9 @@
       </p>
     </footer>
     <!-- Load the javascripts when the rest of the dom is loaded -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
