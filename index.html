@@ -38,17 +38,17 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div class="container under-navbar">
+    <div class="container under-navbar" ng-controller="ChatController as vm">
       <section class="row">
         <div class="center-block title">
           <a href="#/me"><img src="img/enfadasion.png" alt="user avatar" class="img-circle avatar pull-left"></a>
           <h1>
-            <a href="#/me"><small>User N</small></a>
+            <a href="#/me"><small>{{vm.username}}</small></a>
           </h1>
         </div>
         <hr>
       </section>
-      <section class="row main" ng-controller="ChatController as vm">
+      <section class="row main">
         <div class="col-md-3">
           <div class="jumbotron text-center">
             Info del master
@@ -80,8 +80,11 @@
               <div class="panel-body">
                 Registro de acciones
                 <ul class="list-group">
-                  <li class="list-group-item" ng-repeat="m in vm.actions" ng-class="{'text-left': $even, 'text-right': $odd}">
-                    <strong>{{m.user}}</strong>: {{m.action}}
+                  <li class="{{ m.user === vm.username ? 'list-group-item text-right': 'list-group-item text-left' }}" 
+                      ng-repeat="m in vm.actions">
+                    <span class="{{ m.user === vm.username ? 'user-message': 'chat-message' }}">
+                      <strong>{{m.user}}</strong>: {{m.action}}
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -107,8 +110,11 @@
               <div class="panel-body">
                 Registro de mensajes
                 <ul class="list-group">
-                  <li class="list-group-item" ng-repeat="m in vm.messages" ng-class="{'text-left': $even, 'text-right': $odd}">
-                    <strong>{{m.user}}</strong>: {{m.message}}
+                  <li class="{{ m.user === vm.username ? 'list-group-item text-right': 'list-group-item text-left' }}" 
+                      ng-repeat="m in vm.messages">
+                    <span class="{{ m.user === vm.username ? 'user-message': 'chat-message' }}">
+                      <strong>{{m.user}}</strong>: {{m.message}}
+                    </span>
                   </li>
                 </ul>
               </div>

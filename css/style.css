@@ -47,3 +47,19 @@ footer{
 .chat > .panel > .panel-body{
 	min-height: 25em;
 }
+
+.chat-message{
+	padding: 2px;
+	border: 1px solid;
+	border-radius: 10%;
+	border-color: #FAEBCC;
+	background-color: #FCF8E3;
+}
+
+.user-message{
+	padding: 2px;
+	border: 1px solid;
+	border-radius: 10%;
+	border-color: #D6E9C6;
+	background-color: #DFF0D8;
+}
