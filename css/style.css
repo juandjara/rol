@@ -6,10 +6,9 @@
 	background-color: aliceblue;
 }
 
-.center{
-	text-align: center;
+.text-left{
+	text-align: left;
 }
-
 .avatar{
 	max-width: 100px;
 }
@@ -36,3 +35,10 @@ footer{
 	min-height: 40em;
 }
 
+.chat{
+	padding: 30px 10px !important;
+}
+
+.chat > .panel > .panel-body{
+	min-height: 25em;
+}
